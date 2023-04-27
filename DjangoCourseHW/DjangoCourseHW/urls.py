@@ -21,6 +21,8 @@ import lesson1
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('lesson1.urls')),
+    path('lesson_1/', include('lesson1.urls')),
+    path('lesson_2/', include('lesson2.urls')),
 
 ]
+
