@@ -1,0 +1,10 @@
+{% extends "lesson3/layout.html" %}
+{% block title %}Dune{% endblock %}
+
+{% block body %}
+    <ol>
+        {% for person in people %}
+            <li>{{ person.name }} {{ person.surname }}</li>
+        {% endfor %}
+    </ol>
+{% endblock %}

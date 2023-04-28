@@ -45,4 +45,4 @@ def weather(request):
         'weather': current_weather,
         'temp': temp,
     }
-    return render(request, 'lesson_2/weather.html', context)
+    return render(request, 'lesson2/weather.html', context)

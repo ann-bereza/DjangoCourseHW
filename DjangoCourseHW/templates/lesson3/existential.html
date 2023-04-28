@@ -1,0 +1,14 @@
+{% extends "lesson3/layout.html" %}
+{% block title %}Existential questions{% endblock %}
+
+{% block body %}
+    {% if questions %}
+        <ol>
+            {% for question in questions %}
+                <li><a href="{% url 'question' question.id %}">{{ question.question_text }}</a></li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h3>"Список запитань порожній"</h3>
+    {% endif %}
+{% endblock %}

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'lesson1',
     'lesson2',
+    'lesson3',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
