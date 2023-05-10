@@ -1,0 +1,49 @@
+[
+    {
+        "model": "lesson4.product",
+        "pk": 1,
+        "fields": {
+            "name": "Django for Beginners",
+            "description": "A beginner's guide to Django",
+            "price": 29.99,
+            "categories": [1]
+        }
+    },
+    {
+        "model": "lesson4.product",
+        "pk": 2,
+        "fields": {
+            "name": "JavaScript for Frontend Developers",
+            "description": "A guide to JavaScript for frontend development",
+            "price": 39.99,
+            "categories": [1],
+            "tags": [2]
+        }
+    },
+    {
+        "model": "lesson4.product",
+        "pk": 3,
+        "fields": {
+            "name": "Apple iPhone 13",
+            "description": "The latest iPhone model",
+            "price": 999.99,
+            "categories": [2],
+            "tags": [3]
+        }
+    },
+  {
+    "model": "lesson4.product",
+    "pk": 4,
+    "fields": {
+      "name": "L'Oreal Paris Liquid Lipstick",
+      "description": "A long-lasting lipstick",
+      "price": 8.99,
+      "categories": [
+        4
+      ],
+      "tags": [
+        4
+      ]
+    }
+  }
+]

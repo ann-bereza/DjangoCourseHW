@@ -1,0 +1,42 @@
+[
+    {
+        "model": "lesson4.category",
+        "pk": 1,
+        "fields": {
+            "name": "Books",
+            "description": "Books about programming"
+        }
+    },
+    {
+        "model": "lesson4.category",
+        "pk": 2,
+        "fields": {
+            "name": "Electronics",
+            "description": "Electronic devices and gadgets"
+        }
+    },
+    {
+        "model": "lesson4.category",
+        "pk": 3,
+        "fields": {
+            "name": "Clothing",
+            "description": "Fashionable clothing for all occasions"
+        }
+    },
+    {
+        "model": "lesson4.category",
+        "pk": 4,
+        "fields": {
+            "name": "Beauty",
+            "description": "Cosmetics and skincare products"
+        }
+    },
+    {
+        "model": "lesson4.category",
+        "pk": 5,
+        "fields": {
+            "name": "Home",
+            "description": "Home appliances and decor"
+        }
+    }
+]
