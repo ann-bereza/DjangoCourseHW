@@ -1,0 +1,10 @@
+{% extends "lesson3/layout.html" %}
+{% block title %}Feedback Form{% endblock %}
+{% block body %}
+    <h1>Feedback Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
