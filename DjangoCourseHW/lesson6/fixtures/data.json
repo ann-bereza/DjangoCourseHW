@@ -1,0 +1,66 @@
+[
+    {
+        "model": "lesson6.artist",
+        "pk": 1,
+        "fields": {
+            "name": "Muse",
+            "albums": [1, 2]
+        }
+    },
+    {
+        "model": "lesson6.artist",
+        "pk": 2,
+        "fields": {
+            "name": "діти інженерів",
+            "albums": [3]
+        }
+    },
+    {
+        "model": "lesson6.album",
+        "pk": 1,
+        "fields": {
+            "title": "The Resistance",
+            "release_date": "2009-09-14",
+            "genres": [1, 2]
+        }
+    },
+    {
+        "model": "lesson6.album",
+        "pk": 2,
+        "fields": {
+            "title": "Simulation Theory",
+            "release_date": "2018-11-09",
+            "genres": [1, 3]
+        }
+    },
+    {
+        "model": "lesson6.album",
+        "pk": 3,
+        "fields": {
+            "title": "Велкам 2 Юкрейн, панк",
+            "release_date": "2021-03-01",
+            "genres": [1, 3]
+        }
+    },
+    {
+        "model": "lesson6.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Pop/Rock"
+        }
+    },
+    {
+        "model": "lesson6.genre",
+        "pk": 2,
+        "fields": {
+            "name": "Alternative"
+        }
+    },
+    {
+        "model": "lesson6.genre",
+        "pk": 3,
+        "fields": {
+            "name": "Indie"
+        }
+    }
+]
