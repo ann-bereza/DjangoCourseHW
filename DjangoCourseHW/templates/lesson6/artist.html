@@ -1,0 +1,13 @@
+{% extends "lesson6/layout.html" %}
+{% block title %}Artists{% endblock %}
+
+{% block body %}
+    {% for artist in artists %}
+        <h3>{{ artist.name }}</h3>
+        <ul>
+            {% for album in artist.albums.all %}
+                <li>{{ album.title }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "lesson6/layout.html" %}
+{% block title %}Artists{% endblock %}
+
+{% block body %}
+    {% for artist in artists %}
+        <h3>{{ artist.name }}</h3>
+    {% endfor %}
+{% endblock %}
