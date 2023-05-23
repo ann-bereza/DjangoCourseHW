@@ -1,9 +1,13 @@
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from rest_framework import generics
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 from .forms import RegistrationForm, LoginForm, FeedbackForm
-from .models import User
+from .models import User, Feedback
+from .serializers import FeedbackSerializer
 
 
 def main(request):
@@ -56,3 +60,46 @@ def feedback_form(request):
 
 def feedback_success(request):
     return render(request, 'lesson5/feedback_success.html')
+
+
+class ReviewListCreateView(generics.ListCreateAPIView):
+    queryset = Feedback.objects.all()
+    serializer_class = FeedbackSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+
+class ReviewByIdView(generics.ListAPIView):
+    serializer_class = FeedbackSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+    def get_queryset(self):
+        review_id = self.kwargs['pk']
+        return Feedback.objects.filter(pk=review_id)
+
+
+class ReviewByTitleView(generics.ListAPIView):
+    serializer_class = FeedbackSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+    def get_queryset(self):
+        title = self.kwargs['title']
+        return Feedback.objects.filter(title=title)
+
+
+class ReviewRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Feedback.objects.all()
+    serializer_class = FeedbackSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)

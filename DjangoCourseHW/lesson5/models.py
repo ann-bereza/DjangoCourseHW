@@ -28,7 +28,7 @@ class Feedback(models.Model):
         ('positive', 'Positive'),
         ('negative', 'Negative'),
     )
-
+    title = models.CharField(max_length=255, default="Some title")
     image = models.ImageField(upload_to='lesson5/static/img/feedback_images')
     email = models.EmailField()
     description = models.TextField()
